@@ -1,0 +1,44 @@
+Git Commands -
+1) Create Any Project.
+2) Set username -> git config -–global user.name “[name]”
+3) Set email address -> git config -–global user.email “[email address]”
+4) Set Password -> git config -–global user.password “[password]”
+5) Obtain repository from existing URL -> git clone [url] i.e. SVN Checkout
+6) Create repository -> git init [repository name]
+7) Copy project into repository on our system. After creating repository one folder is created copy project in that folder.
+8) Then go to created folder repository path and execute commands for further execution.
+9) Add particular file in repository -> git add [file]
+10) Add all files in repository -> git add .
+11) Commit added files in repository -> git commit -m “[ Type in the commit message]” -> After committed commitID generated and can used with any other operations.
+12) Commit any file that is changed or added files in repository -> git commit -a
+		Here I did not give commit message so text starting with # is display to go out of this command press ESC then : then enter wq 
+		And add commit message use command for it -> git commit -a -m "[ Type in the commit message]"
+13) To check difference between files having changes and not yet committed -> git diff
+14) Differences between the files in the staging area and the latest version present -> git diff –staged
+15) Differences between the two branches mentioned -> git diff [first branch] [second branch]
+16) Unstages the file, but it preserves the file contents -> git reset [file]
+17) Undoes all the commits after the specified commit and preserves the changes locally -> git reset [commit] -> (commit means any file or project name)
+18) Discards all history and goes back to the specified commit -> git reset –hard [commit] -> (commit means any file or project name)
+19) Lists all the files that have to be committed -> git status
+20) Deletes the file from your working directory and stages the deletion -> rm [file]
+21) List the version history for the current branch -> git log
+22) Lists version history for a file, including the renaming of files also -> git log -–follow[file] -> (commit means any file or project name)
+23) Shows the metadata and content changes of the specified commit -> git show [commit] -> (commit means any file or project name) 
+24) Used to give tags to the specified commit -> git tag [commitID]
+25) Lists all the local branches in the current repository -> git branch
+26) Creates a new branch -> git branch [branch name]
+27) Used to delete branch -> git branch -d [branch name]
+28) Used to switch from one branch to another -> git checkout [branch name]
+29) Creates a new branch and also switches to it -> git checkout -b [branch name]
+30) Merges the specified branch’s history into the current branch -> git merge [branch name]
+31) Used to connect your local repository to the remote server -> git remote add [variable name] [Remote Server Link]
+32) Sends the committed changes of master branch to your remote repository -> git push [variable name] master
+33) Sends the branch commits to your remote repository -> git push [variable name] [branch]  
+34) Pushes all branches to your remote repository -> git push –all [variable name]
+35) Deletes a branch on your remote repository -> git push [variable name] :[branch name]
+36) Fetches and merges changes on the remote server to your working directory -> git pull [Repository Link]
+37) Command temporarily stores all the modified tracked files -> git stash save
+38) Command restores the most recently stashed files -> git stash pop
+39) Command lists all stashed changesets -> git stash list
+40) Command discards the most recently stashed changeset -> git stash drop
+41) If remote URL changes set-url used to set URL on which data want to push -> $ git remote set-url origin									https://github.com/Pratiksha15k/POC_iASYS.git
