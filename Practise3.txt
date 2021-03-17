@@ -1,0 +1,50 @@
+//count repeated elements in an array
+int[] countElement(int[] array){
+array = Arrays.sort(array);
+for(int i=array.length;i>0;i--){
+int count =0;
+	for(int j=array.length;j>i+1;j--){
+		if(array[i] == array[j] && i!=j){
+			count++;
+		}
+          System.out.print(array[i]+":"+count);
+	}
+}
+}
+
+//print array without loop
+Arrays.toString(array);
+
+//find number is palindrome or not
+int palindrome = number; // copied number into variable
+        int reverse = 0;
+
+        while (palindrome != 0) {
+            int remainder = palindrome % 10;
+            reverse = reverse * 10 + remainder;
+            palindrome = palindrome / 10;
+        }
+
+        // if original and reverse of number is equal means
+        // number is palindrome in Java
+        if (number == reverse) {
+            return true;
+        }
+        return false;
+
+//find string is palindrome or not
+char string1[]={"naman"};
+      int i, length;
+      int flag = 0;
+      length = strlen(string1);
+      for(i=0;i < length ;i++){
+         if(string1[i] != string1[length-i-1]) {
+            flag = 1;
+            break;
+         }
+      }
+      if (flag==1){
+         printf(" string is not a palindrome");
+      } else {
+         printf(" string is a palindrome");
+      }

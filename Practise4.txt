@@ -1,0 +1,80 @@
+//find prime numbers
+ for (i = 1; i <= maxCheck; i++) {
+            for (int j = 2; j <= i / 2; j++) {
+            remainder = i % j;
+            if (remainder == 0) {
+				flag = false;
+            }else{
+				flag = true;
+			}
+        }
+		if(flag){
+			prime number i
+		}
+        }
+
+//maximum sum of subarray in array
+ public int kandaneForMaxSubArrayForNegativ(int[] arr) {
+  int maxEndHere = arr[0];
+  int maxSoFar = arr[0];
+  for(int i=1;i<arr.length;i++){
+   maxEndHere = Math.max(arr[i], maxEndHere+arr[i]);
+   maxSoFar = Math.max(maxSoFar,maxEndHere);
+  }
+  return maxSoFar;
+ }
+ 
+ //sum of prime number
+ public class Main {
+ 
+    public static void main(String args[]){
+         
+        int number = 2;
+        int count = 0;
+        long sum = 0;
+        while(count < 1000){
+            if(isPrimeNumber(number)){
+                sum += number;
+                count++;
+            }
+            number++;
+        }
+        System.out.println(sum);
+    }
+     
+    private static boolean isPrimeNumber(int number){
+         
+        for(int i=2; i<=number/2; i++){
+            if(number % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+public class PrintPrimeNumberMain {
+ 
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 to 100 are:");
+        for (int i = 1; i < 100; i++) {
+            if(isPrimeNumber(i))
+            {
+                System.out.print(" "+i);
+            }
+        }
+    }
+ 
+    public static boolean isPrimeNumber(int number) {
+           if (number <= 1) {
+               return false;
+           }
+           for (int i = 2; i <= Math.sqrt(number); i++) {
+               if (number % i == 0) {
+                   return false;
+               }
+           }
+           return true;
+    }
+}

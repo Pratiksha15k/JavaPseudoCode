@@ -1,0 +1,49 @@
+//finding prime number using java8
+public static boolean isPrime(int number) {
+    return IntStream.rangeClosed(2, number/2).noneMatch(i -> number%i == 0).sum();
+}
+
+//select nth salary from employee table
+SELECT salary FROM Employee ORDER BY salary DESC LIMIT N-1, 1; ---> Nth largest salary
+select * from Employee ORDER BY `sal` DESC limit 5,1; ----> 6th largest salary
+
+//simple functional interface creation and method invoke
+@FunctionalInterface
+interface Demointerface{
+	abstract boolean method(Class<?> class1, Class<?> class2, Class<?> class3);
+}
+
+class DemoClass {
+	DemoInterface demo = (class1, class2, class3) ->{
+		Sysout("parameters");
+	}
+	
+	demo.method();
+}
+
+//filter even number from list and calculate its sum java8
+List<Integer> list = new ArrayList<>();
+
+list.add(1);
+list.add(4);
+list.add(5),
+list.add(7);
+list.add(9);
+
+int sum = list.stream().collect(filter(x->(x%2 !=0 ))).sum();
+
+//pseudocode
+String s1 = "ABC";
+String s2 = new String("ABC");
+final String s3 = "DEF";
+String s4 = s2;
+
+//factorial Java 8
+int number = 5;
+IntStream.rangeClosed(2, number).reduce(1, (x, y) -> x * y)
+
+//fibonacii series
+int number=10 // series upto 10 number
+Stream.iterate(new int[] { 1, 1 }, p -> new int[] { p[1], p[0] + p[1] })
+      .limit(number)
+      .forEach(p -> System.out.println(p[0]));

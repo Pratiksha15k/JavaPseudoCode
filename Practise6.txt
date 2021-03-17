@@ -1,0 +1,41 @@
+//trim method implementation
+String str = " pratiksha   ";
+int i =0;
+while(i<str.length() && Character.isWhiteSpace(str.charAt(i))){
+	i++;
+}
+int j = str.length() - 1;
+while(j>=0 && Character.isWhiteSpace(str.charAt(j))){
+	j--;
+}
+return str.substring(i, j+1);
+
+final class ImmutableClass{
+	//private members
+	//final members
+	//constructor(params)
+	//not setter
+	
+	String name;
+	int number;
+	Address address;
+}
+
+123 === "123"//output
+
+//append 123 to first string, 456 to second string, 789 to third string and so on
+List<String>list = new ArrayList<String>();
+list.add("Pratiksha");
+list.add("Saurabh");
+list.add("Amardeep");
+int i=0;
+for(String str: list){
+	int count=0;
+	while(i<=0){
+		str=str+(i++);
+		count++;
+		if(count==3)
+		break;
+	}
+	System.out.println(str);
+}

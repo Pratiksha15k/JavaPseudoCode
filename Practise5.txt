@@ -1,0 +1,79 @@
+//pseudocode examples
+1) Find output
+String s1 = "Pratiksha";
+String s2 = new String("Pratiksha");
+s2 == s2
+
+2) which method will get called
+Class test{
+	void method1(int []str){
+	
+	}
+	
+	void method1(int... var){
+	
+	}
+	
+	public static void main(){
+		Test t = new Test();
+		t.method1(null);
+	}
+}
+
+3)Weather it will generate error or compiled successfuly
+class a{
+	static void method()throws ArithmeticException{
+		sysout("a")
+	}
+}
+class b extends a{
+	static void method()throws Exception{
+		sysout("b")
+	}
+}
+
+4)Which method will get called?
+class a{
+	static void method()throws ArithmeticException{
+		sysout("a")
+	}
+}
+class b extends a{
+	static void method()throws Exception{
+		sysout("b")
+	}
+}
+A a = new B();
+a.method();
+B b = (B)new A();
+b.method();
+
+5)Find square of numbers,then filter greater than 100 and calculate average
+
+list.stream().forEach(n->(int)Math.pow(n,2)).filter(n->n>100).average();
+
+
+6) find pairs of elements from given array whose sum is 20
+sum => 20 
+array elements => 4,5,7,11,9,12,8,13
+
+for(int i=0;i<arr.length;i++){
+	for(int j=i+1;j<arr.length;j++){
+		if(arr[i]+arr[j] == number && i!=j){
+			sysout(i+":"+j);
+		}
+	}
+}
+
+7) reverse all words from senetense
+String str="pratiksha datir interview";
+String arr[] = str.split(" "); 
+String rev = " ";
+for(String str1:arr){
+	Char[] chars = str1.toCharArray();
+	String reverse = "";
+	for(int i=chars.length;i>0; i--){
+		reverse = reverse+chars[i];
+	}
+	rev = rev+reverse;
+}
